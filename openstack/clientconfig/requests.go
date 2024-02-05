@@ -885,7 +885,9 @@ func NewServiceClient(service string, opts *ClientOpts) (*gophercloud.ServiceCli
 		Availability: GetEndpointType(endpointType),
 	}
 
-	fmt.Println(eo)
+	fmt.Println("Region", eo.Region)
+	fmt.Println("Availability", eo.Availability)
+	fmt.Println("Type", eo.Type)
 
 	switch service {
 	case "baremetal":
