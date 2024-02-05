@@ -885,6 +885,8 @@ func NewServiceClient(service string, opts *ClientOpts) (*gophercloud.ServiceCli
 		Availability: GetEndpointType(endpointType),
 	}
 
+	fmt.Println(eo)
+
 	switch service {
 	case "baremetal":
 		return openstack.NewBareMetalV1(pClient, eo)
