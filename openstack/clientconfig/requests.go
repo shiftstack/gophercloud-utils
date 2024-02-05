@@ -823,6 +823,7 @@ func NewServiceClient(service string, opts *ClientOpts) (*gophercloud.ServiceCli
 	if err != nil {
 		return nil, err
 	}
+	fmt.Println("Identity endpoint:", ao.IdentityEndpoint)
 	pClient, err := openstack.NewClient(ao.IdentityEndpoint)
 	if err != nil {
 		return nil, err
